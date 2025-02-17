@@ -7,6 +7,7 @@ use App\Http\Controllers\BusController;
 use App\Http\Controllers\MechanicController;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\DbqueryController;
+use App\Http\Controllers\EmployeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,3 +44,4 @@ Route::get('/manage-post',[PostController::class, 'index'])->name('manage-post')
 Route::get('/manage-bus',[BusController::class, 'index'])->name('manage-bus');
 Route::get('/manage-mechanic',[MechanicController::class, 'index'])->name('manage-mechanic');
 Route::resource('data',DbqueryController::class);
+Route::get('employee', [EmployeeController::class,'show']);
